@@ -1,0 +1,25 @@
+<div class="container" ng-controller="SignUpController">
+    <div class="text-intro">
+        <h1>Sign Up</h1>
+    </div>
+
+    <form name="myForm" ng-submit="submit()">
+        <input type="text" name="email" placeholder="Enter your name" ng-model="user.name" ng-required="true">
+        <p class="error" ng-show="myForm.name.$invalid && myForm.name.$touched">Fill out your name.</p>
+        <p class="error" ng-show="!myForm.name.$invalid || !myForm.name.$touched"></p>
+        <input type="text" name="email" placeholder="Enter your email" ng-model="user.email" ng-required="true">
+        <p class="error" ng-show="myForm.email.$invalid && myForm.email.$touched">Fill out your email.</p>
+        <p class="error" ng-show="!myForm.email.$invalid || !myForm.email.$touched"></p>
+        <input type="password" name="password" placeholder="Enter your password" ng-model="user.password" ng-required="true">
+        <p class="error" ng-show="myForm.password.$invalid && myForm.password.$touched">Fill out your password.</p>
+        <p class="error" ng-show="!myForm.password.$invalid || !myForm.password.$touched"></p>
+        <input type="password" name="confirmPassword" placeholder="Confirm your password" ng-model="user.confirmPassword" ng-required="true">
+        <p class="error" ng-show="myForm.confirmPassword.$invalid && myForm.confirmPassword.$touched">Please confirm your password.</p>
+        <p class="error" ng-show="!myForm.confirmPassword.$invalid || !myForm.confirmPassword.$touched"></p>
+
+        <button type="submit" class="btn">{{ button }}</button>
+    </form>
+    <div class="text-intro">
+        <p>{{ msg }}</p>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="page" ng-controller="verifyController">
+    <h1 style="font-size: 36px; font-weight: 600"> Enter your code </h1>
+    <div style="font-size: 1.4rem"> The comfirmation code is sent to your email. This code is valid for 5 minutes. Please check your email! </div>
+    <form name="formVerify" class="formVerify" ng-submit="sendCode($event)">
+        <div class="input-field">
+            <input type="number" ng-model="code[0]"/>
+            <input type="number" ng-model="code[1]" disabled />
+            <input type="number" ng-model="code[2]" disabled />
+            <input type="number" ng-model="code[3]" disabled />
+            <input type="number" ng-model="code[4]" disabled />
+            <input type="number" ng-model="code[5]" disabled />
+        </div>
+        <button style="margin-right: 10px" class="btnVerify">{{ resendBtn }}</button>
+        <button type="submit" class="btnVerify" id="verifyBtn">{{ verifyBtn }}</button>
+    </form>
+    <div class="text-intro">
+        <p>{{ msg }}</p>
+    </div>
+</div>

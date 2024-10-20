@@ -1,0 +1,10 @@
+{
+	"devDependencies": {
+		"@eslint/js": "^9.12.0",
+		"eslint": "^9.12.0",
+		"globals": "^15.11.0"
+	},
+	"dependencies": {
+		"angular": "1.8.2"
+	}
+}
